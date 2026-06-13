@@ -1,0 +1,3 @@
+﻿display_name: AI Preflight Skill
+short_description: 强制AI在编码前执行需求澄清与决策流程
+default_prompt: 我想做一个项目，帮我先梳理需求、反问关键问题、锁定决策、检查风险，然后再输出开发规格。

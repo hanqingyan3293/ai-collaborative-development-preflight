@@ -1,0 +1,26 @@
+﻿{
+  "name": "ai-collaborative-development-preflight",
+  "version": "2.2.0",
+  "description": "Standardizes the AI-assisted development preflight workflow. Before implementation, AI should clarify requirements, ask questions, lock decisions, check risks, design architecture, and define acceptance criteria.",
+  "author": {
+    "name": "hanqingyan3293",
+    "url": "https://github.com/hanqingyan3293"
+  },
+  "homepage": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
+  "repository": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
+  "license": "MIT",
+  "keywords": ["preflight", "requirements", "planning", "decision-locking", "codex-skill"],
+  "interface": {
+    "displayName": "AI Preflight",
+    "shortDescription": "Enforce preflight workflow before coding",
+    "longDescription": "Standardizes the AI-assisted development preflight workflow. Before writing any code, AI clarifies requirements, asks structured questions, locks decisions, checks risks, designs architecture, and defines acceptance criteria. Supports 15-step workflow with round-by-round confirmation.",
+    "developerName": "hanqingyan3293",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Read"],
+    "defaultPrompt": [
+      "我想做一个项目，帮我先梳理需求",
+      "Review this project and suggest improvements",
+      "Turn my idea into a development spec"
+    ]
+  }
+}
