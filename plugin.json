@@ -1,0 +1,6 @@
+{
+  "name": "ai-collaborative-development-preflight",
+  "version": "1.0.0",
+  "description": "preflight skill",
+  "entry": "SKILL.md"
+}
