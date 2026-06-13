@@ -1,8 +1,8 @@
 {
   "name": "codex-preflight-skill",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "type": "codex-skill",
-  "description": "Preflight execution engine — forces structured planning before coding",
+  "description": "Preflight execution engine v3.1 — multi-phase planning with loopback gates and mandatory coverage",
   "entry": "SKILL.md",
   "author": "hanqingyan3293"
 }

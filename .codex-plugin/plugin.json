@@ -1,8 +1,8 @@
 {
   "name": "codex-preflight-skill",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "type": "codex-skill",
-  "description": "Preflight execution engine that forces structured planning before coding",
+  "description": "Preflight execution engine v3.1 — multi-phase structured planning with loopback gates, mandatory coverage checklists, pros/cons for every option, and anti-drift rollback",
   "entry": "SKILL.md",
   "author": {
     "name": "hanqingyan3293",
@@ -11,11 +11,11 @@
   "homepage": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
   "repository": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
   "license": "MIT",
-  "keywords": ["preflight", "planning", "decision-locking", "codex-skill", "execution-engine"],
+  "keywords": ["preflight", "planning", "decision-locking", "codex-skill", "execution-engine", "loopback-gates"],
   "interface": {
     "displayName": "AI Preflight",
-    "shortDescription": "Forces structured planning before any code output",
-    "longDescription": "Codex Preflight Execution Engine v3.0. Before writing any code, enforces: FULL MODE (12-step for new projects) or LIGHT MODE (6-step for small changes). Hard constraints on A/B/C/D/E questioning, mandatory decision lock tables, state machine tracking, and SPEC generation. Blocks all code output until USER_CONFIRMATION received.",
+    "shortDescription": "Forces exhaustive structured planning before any code output",
+    "longDescription": "Codex Preflight Execution Engine v3.1. 11-phase structured workflow with: mandatory coverage checklists per phase, pros/cons for every question option, technical term explanations, explicit user-alternative invites, completeness gate with 18-item checklist, anti-drift rollback with affected-module mapping, LIGHT↔FULL mode upgrade path, and compact per-round output format. Blocks all code until USER_CONFIRMATION on full SPEC.",
     "developerName": "hanqingyan3293",
     "category": "Coding",
     "capabilities": ["Interactive", "Read"],
