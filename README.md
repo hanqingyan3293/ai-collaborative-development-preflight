@@ -1,36 +1,57 @@
-# AI协作开发前期规范
+# AI协作开发前期规范 v3.1
 
 > 让 AI 先想清楚，再写代码。  
 > Make AI clarify, plan, and lock decisions before implementation.
 
-《AI协作开发前期规范》是一套面向所有 AI 协作开发场景的开源流程规范。它以 **Codex Skill Plugin** 形式交付——不是参考文档，而是 AI 运行时强制执行的规划引擎。
+《AI协作开发前期规范》是一套面向所有 AI 协作开发场景的开源流程规范。以 **Codex Skill Plugin** 形式交付——不是参考文档，而是 AI 运行时强制执行的规划引擎。
 
 English: [README.en.md](./README.en.md)
 
 ## 项目定位
 
-这是一个 **Runtime Execution Engine**，不是说明文档。
+这是一个 **Runtime Execution Engine**，当 Codex 加载本 Skill 后，AI 在写代码前 **必须** 完成：
 
-当 Codex 加载本 Skill 后，AI 在写代码前 **必须** 完成：需求理解 → 方向锁定 → 功能锁定 → 工程锁定 → 完整性检查 → 风险分析 → 架构设计 → 安全审查 → 测试验收计划 → 规格生成 → 用户确认。
+`理解 → 方向锁定 → 功能锁定 → 工程锁定 → 完整性检查 → 风险分析 → 架构设计 → 安全审查 → 测试验收 → SPEC 生成 → 用户确认`
 
-全程 **11 个阶段**，每个阶段有明确的 **覆盖清单**、**出口条件** 和 **循环门控**。用户提出新想法时自动暂停→验证→回滚。
+全程 **11 个阶段**，每阶段有强制覆盖清单、出口条件和循环门控。用户提出新想法时自动暂停→验证→回滚。
 
-## 解决什么问题
+## 快速安装
 
-很多 AI 协作开发失败，不是因为 AI 不会写代码，而是因为一开始就直接进入实现：
+### 方式一：直接下载 Release（推荐）
 
-- 用户只说了一个想法，没有定义边界。
-- AI 没有反问关键问题，或问题太开放、缺少选项引导。
-- 功能范围没有锁定，越做越多。
-- 技术栈随意变化，架构跟着返工。
-- 数据结构、接口、UI、安全、测试没有提前设计。
-- 项目做到一半不断推倒重来。
-- 最后无法判断"是否完成"。
+1. 下载 [最新 Release 压缩包](https://github.com/hanqingyan3293/ai-collaborative-development-preflight/releases/latest)
+2. 解压到 Codex skills 目录：
+   ```
+   C:\Users\<你的用户名>\.codex\skills\
+   ```
+3. 重启 Codex
 
-v3.1 版本在此基础上进一步解决了：
-- 提问不够全面详细（每个阶段有 MANDATORY_COVERAGE 清单）
-- 选项不够具体（必须列出优劣、解释专业术语、邀请用户提出新方案）
-- 用户新想法导致流程混乱（防偏移回滚机制）
+解压后的目录结构：
+```
+.codex/skills/ai-collaborative-development-preflight/
+├── .codex-plugin/plugin.json
+├── skills/.../SKILL.md
+├── agents/openai.yaml
+├── README.md
+├── LICENSE
+└── CHANGELOG.md
+```
+
+### 方式二：Git Clone
+
+```bash
+git clone https://github.com/hanqingyan3293/ai-collaborative-development-preflight.git $CODEX_HOME/skills/ai-collaborative-development-preflight
+```
+
+## 快速使用
+
+安装后，在 Codex 中输入以下任意语句即可触发：
+
+```text
+我想做一个项目，帮我先梳理需求
+```
+
+或直接描述项目构想，AI 会自动进入 FULL MODE 11 阶段流程。
 
 ## 核心流程
 
@@ -47,77 +68,31 @@ v3.1 版本在此基础上进一步解决了：
 ║  [完整性门控] ← 不通过则回退 ║
 ╚══════════════════════════╝
      ↓
-【风险分析】
+【风险分析】→【架构设计】→【安全检查】→【测试验收】
      ↓
-【架构设计】→【安全检查】→【测试验收】
-     ↓
-【SPEC 生成】
-     ↓
-【用户确认】→ READY → 开始写代码
+【SPEC 生成】→【用户确认】→ READY → 开始写代码
 ```
-
-## 快速开始
-
-把下面这段话发给 AI：
-
-```text
-请按《AI协作开发前期规范》v3.1 执行。先复述我的项目构想，再分阶段反问关键问题；
-每个问题须列出选项优劣、解释专业术语、并提示我可以提出新方案。
-在需求、技术栈、架构和验收标准未锁定前，不要直接进入正式实现。
-每轮回答后请输出：当前阶段、已锁定决策、风险、下一步问题。
-```
-
-更多说明见：[docs/guides/quick-start.md](./docs/guides/quick-start.md)
 
 ## 核心文件
 
-| 文件 / 目录 | 用途 |
-|---|---|
-| `SKILL.md` | ⭐ AI 运行时执行规则（Codex 直接读取） |
-| `plugin.json` | Codex 插件声明 |
-| `.codex-plugin/plugin.json` | Codex 标准插件配置 |
+| 文件 | 用途 |
+|------|------|
+| `.codex-plugin/plugin.json` | Codex 插件清单（Codex 识别入口） |
+| `skills/ai-collaborative-development-preflight-AI协作开发前期规范/SKILL.md` | ⭐ AI 运行时执行规则 |
 | `agents/openai.yaml` | Agent 元数据 |
-| `docs/templates/` | 决策锁定表、开发规格、需求澄清等输出模板 |
-| `docs/guides/` | Codex 使用指南、快速开始 |
-| `docs/legacy/` | v2.x 归档（原完整参考文档） |
-| `examples/` | 桌面、Web、AI工具、游戏、浏览器插件、自动化脚本、高级示例 |
-| `.github/` | Issue 与 Pull Request 模板 |
 
-## 版本历史
+完整参考文档和模板见 GitHub 仓库完整版。
 
-| 版本 | 日期 | 核心变化 |
-|------|------|----------|
-| **v3.1.0** | 2026-06-14 | 阶段化+循环门控；强制覆盖清单；选项必含优劣/术语解释/邀请新方案；防偏移回滚；LIGHT↔FULL 升级路径；【STATE】显式状态输出 |
-| v3.0.0 | 2026-06-14 | 执行引擎重写；FULL/LIGHT 双模式；状态机；硬约束提问格式；阻断规则 |
-| v2.2 | 2026-06-13 | 添加 plugin.json + Codex 强制规则 + agents 元数据 |
-| v2.1 | 2026-06-13 | 精简 skill；选项式反问；防偏移机制；动态提问 |
-| v2.0 | 2026-06-13 | 完整双语项目脚手架；15步工作流 |
+## 版本
 
-## 推荐使用方式
+| 版本 | 核心变化 |
+|------|----------|
+| **v3.1.0** | 11阶段循环门控；强制覆盖清单；选项优劣+术语解释；完整性门控；防偏移回滚；LIGHT↔FULL升级路径 |
+| v3.0.0 | 执行引擎重写；FULL/LIGHT双模式；状态机；硬约束 |
+| v2.x | 完整双语项目脚手架；15步工作流 |
 
-### 方式一：聊天 AI（ChatGPT / Claude）
-
-把快速开始的提示词复制给 AI，然后描述项目构想。
-
-### 方式二：Codex
-
-将本仓库克隆到 Codex skills 目录，Codex 自动识别加载。当你说"做一个项目"时自动进入 FULL MODE。
-
-### 方式三：作为项目规范
-
-复制 `docs/templates/` 中的模板和 `docs/legacy/checklists/` 中的检查表到自己的项目，用于规范 AI 开发流程。
-
-## 贡献
-
-欢迎贡献：新模板、新示例、更好的中英文翻译、更多项目类型问题库、Codex / Cursor / Claude / ChatGPT 使用经验。
-
-请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+详见 [CHANGELOG.md](./CHANGELOG.md)
 
 ## 许可证
 
-MIT License。见 [LICENSE](./LICENSE)。
-
-## Language / 语言
-
-- 中文：当前文件
-- English: [README.en.md](./README.en.md)
+MIT License — [hanqingyan3293](https://github.com/hanqingyan3293)
