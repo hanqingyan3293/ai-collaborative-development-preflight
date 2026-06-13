@@ -1,0 +1,27 @@
+{
+  "name": "ai-collaborative-development-preflight-AI协作开发前期规范",
+  "version": "3.1.0",
+  "description": "Preflight execution engine v3.1 — multi-phase structured planning with loopback gates, mandatory coverage checklists, pros/cons for every option, and anti-drift rollback",
+  "author": {
+    "name": "hanqingyan3293",
+    "url": "https://github.com/hanqingyan3293"
+  },
+  "homepage": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
+  "repository": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
+  "license": "MIT",
+  "keywords": ["preflight", "planning", "decision-locking", "codex-skill", "execution-engine", "loopback-gates"],
+  "interface": {
+    "displayName": "AI Preflight",
+    "shortDescription": "Forces exhaustive structured planning before any code output",
+    "longDescription": "Codex Preflight Execution Engine v3.1. 11-phase structured workflow with: mandatory coverage checklists per phase, pros/cons for every question option, technical term explanations, explicit user-alternative invites, completeness gate with 18-item checklist, anti-drift rollback with affected-module mapping, LIGHT↔FULL mode upgrade path, and compact per-round output format. Blocks all code until USER_CONFIRMATION on full SPEC.",
+    "developerName": "hanqingyan3293",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Read"],
+    "defaultPrompt": [
+      "我想做一个项目，帮我先梳理需求",
+      "Review this project and suggest improvements",
+      "Turn my idea into a development spec"
+    ]
+  },
+  "skills": "./skills/"
+}
