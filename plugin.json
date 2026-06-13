@@ -1,6 +1,8 @@
 {
-  "name": "ai-collaborative-development-preflight",
-  "version": "1.0.0",
-  "description": "preflight skill",
-  "entry": "SKILL.md"
+  "name": "codex-preflight-skill",
+  "version": "3.0.0",
+  "type": "codex-skill",
+  "description": "Preflight execution engine — forces structured planning before coding",
+  "entry": "SKILL.md",
+  "author": "hanqingyan3293"
 }

@@ -1,7 +1,9 @@
-﻿{
-  "name": "ai-collaborative-development-preflight",
-  "version": "2.2.0",
-  "description": "Standardizes the AI-assisted development preflight workflow. Before implementation, AI should clarify requirements, ask questions, lock decisions, check risks, design architecture, and define acceptance criteria.",
+{
+  "name": "codex-preflight-skill",
+  "version": "3.0.0",
+  "type": "codex-skill",
+  "description": "Preflight execution engine that forces structured planning before coding",
+  "entry": "SKILL.md",
   "author": {
     "name": "hanqingyan3293",
     "url": "https://github.com/hanqingyan3293"
@@ -9,11 +11,11 @@
   "homepage": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
   "repository": "https://github.com/hanqingyan3293/ai-collaborative-development-preflight",
   "license": "MIT",
-  "keywords": ["preflight", "requirements", "planning", "decision-locking", "codex-skill"],
+  "keywords": ["preflight", "planning", "decision-locking", "codex-skill", "execution-engine"],
   "interface": {
     "displayName": "AI Preflight",
-    "shortDescription": "Enforce preflight workflow before coding",
-    "longDescription": "Standardizes the AI-assisted development preflight workflow. Before writing any code, AI clarifies requirements, asks structured questions, locks decisions, checks risks, designs architecture, and defines acceptance criteria. Supports 15-step workflow with round-by-round confirmation.",
+    "shortDescription": "Forces structured planning before any code output",
+    "longDescription": "Codex Preflight Execution Engine v3.0. Before writing any code, enforces: FULL MODE (12-step for new projects) or LIGHT MODE (6-step for small changes). Hard constraints on A/B/C/D/E questioning, mandatory decision lock tables, state machine tracking, and SPEC generation. Blocks all code output until USER_CONFIRMATION received.",
     "developerName": "hanqingyan3293",
     "category": "Coding",
     "capabilities": ["Interactive", "Read"],
