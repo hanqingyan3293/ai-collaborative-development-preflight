@@ -14,12 +14,11 @@ Please follow the AI Collaborative Development Preflight process. First restate 
 2. Send your project idea to an AI assistant.
 3. Answer the questions until scope, technology choices, architecture, and acceptance criteria are locked.
 
-## Example
+## Full usage
 
-User:
+Ask the AI to read:
 
-```text
-I want to build a local file encryption app that can disguise encrypted files as images and audio. It should be open source.
-```
-
-The AI should first clarify the project, ask questions, and summarize decisions before implementation.
+1. `skill.md`
+2. `docs/workflow.md`
+3. `templates/core/development-spec.md`
+4. A relevant example under `examples/`

@@ -2,7 +2,10 @@
 
 ## Layers
 
-## Module responsibilities
+## Modules
+
+| Module | Responsibility | Input | Output | Dependencies |
+|---|---|---|---|---|
 
 ## Dependencies
 
@@ -11,3 +14,7 @@
 ## Data flow
 
 ## Error flow
+
+## Extension points
+
+## Maintenance strategy

@@ -12,3 +12,5 @@ labels: bug
 ## 预期结果 / Expected
 
 ## 实际结果 / Actual
+
+## 相关文件 / Related files

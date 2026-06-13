@@ -10,3 +10,5 @@ labels: example
 ## 为什么需要 / Why needed
 
 ## 建议内容 / Suggested content
+
+## 是否可提供中英文版本 / Bilingual version

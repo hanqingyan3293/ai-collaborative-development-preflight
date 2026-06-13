@@ -1,3 +1,5 @@
 # Browser Extension Example
 
-This example demonstrates the AI collaborative development preflight workflow.
+A web page highlighting extension.
+
+This directory shows how to apply the preflight workflow to this type of project.

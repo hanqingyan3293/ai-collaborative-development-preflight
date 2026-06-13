@@ -1,40 +1,43 @@
 # AI协作开发前期规范
 
 > 让 AI 先想清楚，再写代码。  
-> Make AI clarify, plan, and lock decisions before writing code.
+> Make AI clarify, plan, and lock decisions before implementation.
 
-《AI协作开发前期规范》是一套面向所有 AI 协作开发场景的开源流程规范。它要求 AI 在正式进入实现阶段前，先完成需求理解、反问澄清、决策锁定、遗漏检查、架构规划、测试验收设计和开发规格输出。
+《AI协作开发前期规范》是一套面向所有 AI 协作开发场景的开源流程规范。它通过 `skill.md`、模板、检查表、示例和 Codex 使用说明，帮助用户在正式开发前完成需求澄清、反问确认、决策锁定、架构规划、风险检查和验收设计。
 
 English: [README.en.md](./README.en.md)
 
-## 为什么需要这个项目
+## 项目定位
 
-很多 AI 编程失败，不是因为 AI 不会写代码，而是因为开始写代码前没有把需求、边界、技术栈、架构和验收标准说清楚。
+这是一个文档型、Skill 型、流程型开源项目，不是普通软件库。它的目标是让 ChatGPT、Codex、Cursor、Claude、Copilot 等 AI 工具在开发前先完成“项目预检”，避免需求不清、技术栈混乱、架构返工和验收标准缺失。
 
-常见问题包括：
+## 解决什么问题
 
-- 用户只描述了想法，没有明确功能边界。
-- AI 没有反问，直接开始写代码。
+很多 AI 协作开发失败，不是因为 AI 不会写代码，而是因为一开始就直接进入实现：
+
+- 用户只说了一个想法，没有定义边界。
+- AI 没有反问关键问题。
+- 功能范围没有锁定。
 - 技术栈随意变化。
-- 数据结构和文件格式没有提前定义。
-- UI 交互、异常处理、安全边界被忽略。
-- 后续开发时不断返工。
-- 验收标准不清楚，无法判断“是否完成”。
+- 架构、数据结构、接口、UI、安全、测试没有提前设计。
+- 项目做到一半不断返工。
+- 最后无法判断“是否完成”。
 
-这个项目把“AI 开发前置工作”规范成可复用的流程、Skill、模板、检查表和示例。
+本项目把这套前置过程做成可复用的规范。
 
 ## 适用范围
 
-适用于所有使用 AI 协作开发的项目，包括但不限于：
+适用于几乎所有 AI 协作项目：
 
 - 桌面软件
 - Web 网站
 - 移动 App
 - 浏览器插件
+- 后端服务
+- 命令行工具
 - AI 工具
 - 游戏
 - 自动化脚本
-- 后端服务
 - 数据处理工具
 - 文档系统
 - 知识库系统
@@ -43,22 +46,13 @@ English: [README.en.md](./README.en.md)
 
 ## 快速开始
 
-把下面这段发给 AI：
+把下面这段话发给 AI：
 
 ```text
-请按《AI协作开发前期规范》执行。先复述我的项目构想，再分轮反问关键问题；在需求、技术栈、架构和验收标准未锁定前，不要直接写正式代码。每轮回答后请输出：已确定、未确定、存在风险、下一步问题。
+请按《AI协作开发前期规范》执行。先复述我的项目构想，再分轮反问关键问题；在需求、技术栈、架构和验收标准未锁定前，不要直接进入正式实现。每轮回答后请输出：已确定、未确定、存在风险、下一步问题。
 ```
 
 更多说明见：[QUICK_START.md](./QUICK_START.md)
-
-## 核心文件
-
-- [skill.md](./skill.md)：给 AI 读取和执行的双语 Skill 规则。
-- [docs/](./docs/)：完整流程说明和问题库。
-- [templates/](./templates/)：开发前期模板。
-- [checklists/](./checklists/)：检查清单。
-- [examples/](./examples/)：不同类型项目的完整示例。
-- [.github/](./.github/)：Issue 与 PR 模板。
 
 ## 核心流程
 
@@ -84,40 +78,53 @@ AI 生成开发规格文档
 再进入代码生成阶段
 ```
 
-## 目录结构
+## 核心文件
 
-```text
-.
-├─ README.md
-├─ README.en.md
-├─ QUICK_START.md
-├─ QUICK_START.en.md
-├─ skill.md
-├─ LICENSE
-├─ CONTRIBUTING.md
-├─ CONTRIBUTING.en.md
-├─ CODE_OF_CONDUCT.md
-├─ CHANGELOG.md
-├─ docs/
-├─ templates/
-├─ checklists/
-├─ examples/
-└─ .github/
-```
+| 文件 / 目录 | 用途 |
+|---|---|
+| `skill.md` | 给 AI 读取的双语执行规则 |
+| `QUICK_START.md` | 快速复制使用的启动提示词 |
+| `docs/` | 完整流程说明、问题库、Codex 使用说明 |
+| `templates/` | 需求澄清、决策锁定、开发规格等模板 |
+| `checklists/` | 前期检查、AI 编码检查、安全检查、发布检查 |
+| `examples/` | 桌面、Web、AI 工具、游戏、浏览器插件、自动化脚本、高级 MomoCrypt 示例 |
+| `.github/` | Issue 与 Pull Request 模板 |
+| `CODEX_UPLOAD_GUIDE.md` | 给 Codex 上传/同步 GitHub 仓库的教程 |
 
-## 项目状态
+## 推荐使用方式
 
-当前版本为规范和模板项目，不包含 CLI、网站或应用程序。后续可以扩展为：
+### 方式一：聊天 AI
 
-- CLI 工具
-- Web 表单生成器
-- VS Code / Cursor 模板
-- GitHub Issue 工作流
-- AI Agent 前置检查器
+把 `QUICK_START.md` 的启动提示词复制给 AI，然后描述项目构想。
+
+### 方式二：Codex / Cursor
+
+把本仓库作为项目规则或上下文，让 AI 优先读取：
+
+1. `skill.md`
+2. `docs/workflow.md`
+3. `templates/core/development-spec.md`
+4. 对应项目类型的 `examples/`
+
+### 方式三：开源项目模板
+
+复制本仓库中的模板和检查表，放进自己的项目仓库，用于规范 AI 开发流程。
+
+## 项目成熟度
+
+当前版本已经包含完整项目结构、核心 Skill、模板、检查表、示例和 Codex 教程。它可以作为一个可公开发布的 Skill 项目继续迭代。
 
 ## 贡献
 
-欢迎贡献模板、示例、翻译和改进建议。请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+欢迎贡献：
+
+- 新模板
+- 新示例
+- 更好的中英文翻译
+- 更多项目类型问题库
+- Codex / Cursor / Claude / ChatGPT 使用经验
+
+请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md)。
 
 ## 许可证
 

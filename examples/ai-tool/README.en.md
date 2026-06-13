@@ -1,3 +1,5 @@
 # AI Tool Example
 
-This example demonstrates the AI collaborative development preflight workflow.
+An API-based prompt organization tool.
+
+This directory shows how to apply the preflight workflow to this type of project.

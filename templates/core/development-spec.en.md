@@ -1,21 +1,43 @@
 # Development Specification Template
 
-## Project overview
+## 1. Project overview
 
-## Locked decisions
+## 2. Locked decisions
 
-## Feature scope
+## 3. Target users and scenarios
 
-## Technology stack
+## 4. Feature scope
 
-## Architecture
+### Required
 
-## Data structures and interfaces
+### Explicitly excluded
 
-## UI and interaction
+### Optional extensions
 
-## Security and permissions
+## 5. Technology stack
 
-## Testing and acceptance
+## 6. System architecture
 
-## AI implementation rules
+## 7. Module responsibilities
+
+## 8. Data structures, file formats, and APIs
+
+## 9. UI and interaction flow
+
+## 10. Security, privacy, and permissions
+
+## 11. Error handling
+
+## 12. Logs, history, and configuration
+
+## 13. Test plan
+
+## 14. Acceptance criteria
+
+## 15. Packaging, release, and deployment
+
+## 16. AI implementation rules
+
+## 17. Risk list
+
+## 18. Change log

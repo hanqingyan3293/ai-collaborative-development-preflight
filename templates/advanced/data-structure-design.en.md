@@ -8,6 +8,10 @@
 
 ## APIs
 
+## Events
+
 ## Error codes
 
 ## Versioning
+
+## Migration strategy

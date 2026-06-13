@@ -1,38 +1,48 @@
 # AI Collaborative Development Preflight
 
-> Make AI clarify, plan, and lock decisions before writing code.
+> Make AI clarify, plan, and lock decisions before implementation.
 
-AI Collaborative Development Preflight is an open workflow specification for AI-assisted development. It guides AI assistants to clarify requirements, ask questions, lock decisions, check risks, design architecture, and define acceptance criteria before implementation.
+AI Collaborative Development Preflight is an open workflow specification for AI-assisted development. It provides `skill.md`, templates, checklists, examples, and Codex instructions to help AI assistants clarify requirements, ask questions, lock decisions, design architecture, check risks, and define acceptance criteria before implementation.
 
 中文: [README.md](./README.md)
 
-## Why this project exists
+## What this project is
 
-Many AI coding failures do not happen because the AI cannot write code. They happen because the project was not clarified before coding.
+This is a documentation-based and skill-based open-source project. It is designed for ChatGPT, Codex, Cursor, Claude, Copilot, and other AI coding assistants.
 
-Common issues include:
+The goal is simple:
 
-- The user describes an idea but not the boundaries.
-- The AI starts coding without asking questions.
-- The technology stack changes randomly.
-- Data structures and file formats are not defined.
-- UI, errors, security, privacy, and acceptance criteria are ignored.
+```text
+Clarify first. Plan first. Lock decisions first. Implement later.
+```
+
+## Problems it solves
+
+AI-assisted development often fails because the project enters implementation too early:
+
+- The idea is vague.
+- The AI does not ask enough questions.
+- Scope is not locked.
+- Technology choices change randomly.
+- Architecture, data structures, UI, security, and tests are not designed.
 - The project requires repeated rework.
+- Acceptance criteria are unclear.
 
-This repository turns the pre-development phase into a reusable workflow, skill, templates, checklists, and examples.
+This repository turns the pre-development phase into a reusable workflow.
 
 ## Scope
 
-This workflow applies to:
+It applies to:
 
 - Desktop apps
 - Web apps
 - Mobile apps
 - Browser extensions
+- Backend services
+- CLI tools
 - AI tools
 - Games
 - Automation scripts
-- Backend services
 - Data tools
 - Documentation systems
 - Knowledge-base systems
@@ -51,12 +61,15 @@ See [QUICK_START.en.md](./QUICK_START.en.md).
 
 ## Core files
 
-- [skill.md](./skill.md): Bilingual AI skill rules.
-- [docs/](./docs/): Workflow documentation and question banks.
-- [templates/](./templates/): Preflight templates.
-- [checklists/](./checklists/): Checklists.
-- [examples/](./examples/): Example projects.
-- [.github/](./.github/): Issue and pull request templates.
+| File / Directory | Purpose |
+|---|---|
+| `skill.md` | Bilingual AI execution rules |
+| `QUICK_START.md` | Quick startup prompt |
+| `docs/` | Workflow docs, question banks, Codex guide |
+| `templates/` | Requirement, decision, and development specification templates |
+| `checklists/` | Preflight, coding, security, and release checklists |
+| `examples/` | Example projects |
+| `.github/` | Issue and pull request templates |
 
 ## License
 

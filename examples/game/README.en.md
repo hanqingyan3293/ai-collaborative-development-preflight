@@ -1,3 +1,5 @@
 # Game Example
 
-This example demonstrates the AI collaborative development preflight workflow.
+A small 2D puzzle game.
+
+This directory shows how to apply the preflight workflow to this type of project.

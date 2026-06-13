@@ -2,9 +2,13 @@
 
 ## Scenario name
 
-As a ...
-I want ...
-So that ...
+## User story
+
+As a [user type],  
+I want to [action],  
+so that [result].
+
+## Preconditions
 
 ## Steps
 
@@ -12,4 +16,8 @@ So that ...
 2.
 3.
 
-## Expected result
+## Success result
+
+## Failure cases
+
+## Acceptance criteria

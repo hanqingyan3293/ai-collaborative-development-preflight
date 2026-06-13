@@ -8,3 +8,5 @@ labels: improvement
 ## 改进建议 / Suggestion
 
 ## 使用场景 / Use case
+
+## 影响范围 / Scope

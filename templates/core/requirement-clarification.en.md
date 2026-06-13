@@ -1,10 +1,18 @@
 # Requirement Clarification Template
 
-## Project idea
+## Original idea
 
 ## AI understanding
 
+## Project type
+
 ## Key questions
+
+### Direction questions
+
+### Feature questions
+
+### Engineering questions
 
 ## User answers
 
@@ -13,3 +21,5 @@
 ## Open questions
 
 ## Risks
+
+## Next questions

@@ -17,7 +17,7 @@ Thank you for improving AI Collaborative Development Preflight.
 2. Templates should include purpose, fields, and examples.
 3. Example projects should show a complete preflight process.
 4. Chinese and English versions should stay structurally aligned.
-5. Platform-specific rules should be placed in examples or dedicated docs.
+5. Platform-specific rules should stay in dedicated docs or examples.
 
 ## Example project requirements
 

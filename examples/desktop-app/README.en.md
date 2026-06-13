@@ -1,3 +1,5 @@
 # Desktop App Example
 
-This example demonstrates the AI collaborative development preflight workflow.
+A cross-platform desktop notes app.
+
+This directory shows how to apply the preflight workflow to this type of project.

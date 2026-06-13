@@ -7,4 +7,6 @@ labels: translation
 
 ## 文件 / File
 
-## 改进内容 / Change
+## 原文 / Original
+
+## 建议译文 / Suggested translation

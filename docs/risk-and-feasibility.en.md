@@ -8,3 +8,14 @@ Each major feature should be marked as:
 - Risky
 - Not recommended
 - Unrealistic
+
+## Common risks
+
+- Conflicting requirements
+- Unsuitable technology stack
+- Unrealistic performance target
+- Underestimated security requirements
+- Platform permission limits
+- Unstable file formats
+- Uncontrolled third-party APIs
+- License conflicts
