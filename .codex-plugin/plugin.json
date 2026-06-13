@@ -1,0 +1,8 @@
+{
+  "name": "ai-collaborative-development-preflight",
+  "version": "2.1.0",
+  "description": "AI协作开发前期规范Skill，用于在编码前执行需求澄清、反问、决策锁定与开发规格生成",
+  "entry": "SKILL.md",
+  "type": "skill",
+  "author": "hanqingyan3293"
+}
