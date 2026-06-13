@@ -1,9 +1,7 @@
 {
-  "name": "codex-preflight-skill",
+  "name": "ai-collaborative-development-preflight-AI协作开发前期规范",
   "version": "3.1.0",
-  "type": "codex-skill",
   "description": "Preflight execution engine v3.1 — multi-phase structured planning with loopback gates, mandatory coverage checklists, pros/cons for every option, and anti-drift rollback",
-  "entry": "SKILL.md",
   "author": {
     "name": "hanqingyan3293",
     "url": "https://github.com/hanqingyan3293"
@@ -24,5 +22,6 @@
       "Review this project and suggest improvements",
       "Turn my idea into a development spec"
     ]
-  }
+  },
+  "skills": "./skills/"
 }

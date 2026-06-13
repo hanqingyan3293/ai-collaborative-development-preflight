@@ -1,11 +1,14 @@
 ---
-name: codex-preflight-skill
-description: Codex Preflight Execution Engine v3.1. Forces multi-phase structured planning with loopback gates. Before any code, MUST complete: Understand → [Question ⇄ Lock]×N → Check → Risk → Architect → Security → Test → SPEC → Confirm. Every question MUST include pros/cons, explain technical terms, and invite user alternatives. Triggers for any project-development, architecture, or feature request.
+name: ai-collaborative-development-preflight-AI协作开发前期规范
+description: >
+  Codex Preflight Execution Engine v3.1.
+  Forces multi-phase structured planning with loopback gates.
+  Before any code, MUST complete: Understand → [Question ⇄ Lock]×N → Check → Risk → Architect → Security → Test → SPEC → Confirm.
+  Every question MUST include pros/cons, explain technical terms, and invite user alternatives.
+  Triggers for any project-development, architecture, or feature request.
 version: 3.1.0
-type: codex-skill
 author: hanqingyan3293
 ---
-
 # 🧠 COdex Preflight Execution Engine v3.1
 
 ## ⛔ 0. PRIME DIRECTIVE
